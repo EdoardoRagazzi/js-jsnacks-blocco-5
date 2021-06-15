@@ -5,38 +5,40 @@
 // Calcola quanto pesano tutte le zucchine.
 // 3. Crea un array di 10 oggetti che rappresentano una zucchina. Dividi in due array separati le zucchine che misurano meno o più di 15cm. Infine stampa separatamente quanto pesano i due gruppi di zucchine
 
-
+//---------------------------------------------1--------------------------------------//
 // 1. Creare un array di oggetti. Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
 // Stampare a schermo la bici con peso minore.
 
-// var bicicletta = [
-//     {
-//         nome: 'bianchi',
-//         peso: 12
-//     },
-//     {
-//         nome: 'trek',
-//         peso: 9
-//     },
-//     {
-//         nome: 'giant',
-//         peso: 14
-//     }
-// ];
+var bicicletta = [
+    {
+        nome: 'bianchi',
+        peso: 12
+    },
+    {
+        nome: 'trek',
+        peso: 9
+    },
+    {
+        nome: 'giant',
+        peso: 14
+    }
+];
 
-// console.log(bicicletta);
-// var pesoMin = bicicletta[0];
+console.log(bicicletta);
+var pesoMin = bicicletta[0];
 
 
-// for (var i = 1; i < bicicletta.length; i++) {
+for (var i = 1; i < bicicletta.length; i++) {
 
-//     if (bicicletta[i].peso < pesoMin.peso) {
-//         pesoMin = bicicletta[i];
+    if (bicicletta[i].peso < pesoMin.peso) {
+        pesoMin = bicicletta[i];
 
-//     }
-// };
-// console.log(pesoMin);
+    }
+};
+console.log(pesoMin);
 
+
+//---------------------------------------------2--------------------------------------//
 // 2. Crea un array di 10 oggetti che rappresentano una zucchina, indicandone per ognuno varietà, peso e lunghezza.
 // Calcola quanto pesano tutte le zucchine.
 
@@ -112,6 +114,7 @@ for (i = 0; i < zucchine.length; i++) {
 }
 console.log(pesoTotale);
 
+//---------------------------------------------3--------------------------------------//
 // 3. Crea un array di 10 oggetti che rappresentano una zucchina. Dividi in due array separati le zucchine che misurano meno o più di 15cm. Infine stampa separatamente quanto pesano i due gruppi di zucchine
 
 var arrayPrimo = [];
@@ -123,8 +126,22 @@ for (i = 0; i < zucchine.length; i++) {
     } else {
         arraySecondo.push(zucchine[i]);
     }
-
 }
+
+var pesoArrayPrimo = 0;
+
+for (i = 0; i < arrayPrimo.length; i++) {
+    var peso = arrayPrimo[i].peso;
+    var pesoArrayPrimo = (pesoArrayPrimo + peso);
+}
+console.log(pesoArrayPrimo);
+
+var pesoArraySecondo = 0;
+for (i = 0; i < arraySecondo.length; i++) {
+    var peso = arraySecondo[i].peso;
+    var pesoArraySecondo = (pesoArraySecondo + peso);
+}
+console.log(pesoArraySecondo);
 
 console.log(arrayPrimo);
 console.log(arraySecondo);
